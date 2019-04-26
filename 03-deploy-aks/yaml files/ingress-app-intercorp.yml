@@ -1,0 +1,10 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  labels:
+    app: application
+  name: application-ingress
+spec:
+  backend:
+    serviceName: application-svc
+    servicePort: http-port
