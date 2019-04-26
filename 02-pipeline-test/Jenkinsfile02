@@ -13,6 +13,7 @@ pipeline {
         steps {
             sh 'docker build -t dockerluisurrelo/application-springboot:latest .'
             sh 'docker tag dockerluisurrelo/application-springboot:latest dockerluisurrelo/application-springboot:unittest'
+            sh 'echo prueba de webhook que dispara el Build Job'
         }
     }
 
