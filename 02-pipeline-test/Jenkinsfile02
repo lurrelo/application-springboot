@@ -11,14 +11,15 @@ pipeline {
 
     stage('Build local image') {
         steps {
-            sh "cd ${params.ARTIFACTORY_DIRECTORY} && chmod +x script/build-images.sh && ./script/build-images.sh"
+            sh 'docker build -t dockerluisurrelo/application-springboot:latest .'
+            sh 'docker tag dockerluisurrelo/application-springboot:latest dockerluisurrelo/application-springboot:unittest'
         }
     }
 
     stage('Publish image') {
         steps {
             withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
-                sh "cd ${params.ARTIFACTORY_DIRECTORY} && docker push dockerluisurrelo/application-springboot:latest"
+                sh "docker push dockerluisurrelo/application-springboot:latest"
             }
         }
     }    
