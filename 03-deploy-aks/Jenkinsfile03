@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh "az login --service-principal --username 730dc447-4c33-41cb-baf5-67c7174a1c3e --password 35fcc9f7-747b-403f-bfa4-ced3ba67095e --tenant eb70478f-0418-4a9a-b691-5c60fe05634e"
                 sh "az aks get-credentials --name akseu2 --resource-group jenkins"
-                sh "kubectl set image deployment dockerluisurrelo/application-springboot application=application-springboot:latest"
+                sh "kubectl set image deployment application-springboot application=application-springboot:latest"
             }
         }
     }
