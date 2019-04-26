@@ -11,7 +11,7 @@ pipeline {
 
     stage('Build local image') {
         steps {
-            sh "cd ${params.ARTIFACTORY_DIRECTORY} && chmod +x script/build-images.sh && ./script/build-images.sh"
+            sh "cd ${params.ARTIFACTORY_DIRECTORY_TEST} && chmod +x script/build-images.sh && ./script/build-images.sh"
         }
     }
 
