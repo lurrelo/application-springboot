@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Deploy image') {
             steps {
-                sh "docker login -u dockerluisurrelo -p moss2007"
+                sh "docker login -u ${params.DOCKER_USER} -p ${DOCKER_PASSWORD}"
                 sh "az login --service-principal --username ${params.ClientID} --password ${params.SecretID} --tenant ${params.TenantID}"
                 sh "az aks get-credentials --name akseu2 --resource-group jenkins"
                 sh "kubectl set image deployment/application application=dockerluisurrelo/application-springboot:latest"
