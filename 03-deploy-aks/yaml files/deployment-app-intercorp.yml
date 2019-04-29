@@ -10,9 +10,8 @@ spec:
         app: application
     spec:
       containers:
-      - name: application-springboot
-        image: >-
-            dockerluisurrelo/application-springboot:latest
+      - name: application
+        image: application-springboot:latest
         ports:
         - name: http-port
           containerPort: 8080
