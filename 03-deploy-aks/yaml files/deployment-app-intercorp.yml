@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: application
-        image: dockerluisurrelo/application-springboot:unittest
+        image: dockerluisurrelo/application-springboot:latest
         ports:
         - name: http-port
           containerPort: 8080
