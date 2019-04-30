@@ -6,4 +6,4 @@ services:
     working_dir: /application
     volumes:
       - ./:/application
-    command: sh -c "mvn test"
+    command: sh -c "mvn install -Dmaven.test.skip=true"
