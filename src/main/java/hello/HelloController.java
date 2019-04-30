@@ -11,9 +11,4 @@ public class HelloController {
     public String index() {
         return "Greetings from Spring Boot!";
     }
-
-    @GetMapping(value="/DevOps")    
-    public String getDevOpsGreetings() {
-        return "Hola Ingeniero DevOps";
-    }
 }
