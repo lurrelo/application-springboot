@@ -12,8 +12,7 @@ public class HelloController {
         return "Greetings from Spring Boot!";
     }
 
-    @RequestMapping(value = "DevOps", method = RequestMethod.GET)
-    @ResponseBody
+    @RequestMapping("/DevOps")    
     public String getDevOpsGreetings() {
         return "Hola Ingeniero DevOps";
     }
