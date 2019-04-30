@@ -12,10 +12,10 @@ spec:
       containers:
       - name: application
         image: dockerluisurrelo/application-springboot:latest
+        imagePullPolicy: Always
         ports:
         - name: http-port
           containerPort: 8080
         env:
           - name: api-application
             value: "http://application:8080/"
-        imagePullPolicy: Always
