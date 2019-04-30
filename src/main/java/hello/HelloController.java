@@ -2,6 +2,7 @@ package hello;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @RestController
 public class HelloController {
@@ -11,7 +12,7 @@ public class HelloController {
         return "Greetings from Spring Boot!";
     }
 
-    @ResquestMapping(value = "DevOps", method = RequestMethod.GET)
+    @RequestMapping(value = "DevOps", method = RequestMethod.GET)
     @ResponseBody
     public String getDevOpsGreetings() {
         return "Hola Ingeniero DevOps";
