@@ -19,7 +19,7 @@ pipeline {
     stage('Publish image') {
         steps {
             withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
-                sh "docker push dockerluisurrelo/application-springboot:latest"
+                sh "docker push dockerluisurrelo/application-springboot:unittest"
             }
         }
     }    
